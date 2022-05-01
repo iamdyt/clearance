@@ -38,10 +38,10 @@
         <div class="sidebar" data-color="blue">
             <div class="logo">
                 <a href="#" class="simple-text logo-mini">
-                    <img src="{{asset('images/MU-Logo.png')}}" alt="">
+                    <img src="{{asset('images/logoede.png')}}" alt="">
                     </a>
                     <a href="#" class="simple-text logo-normal">
-                      MSUSCI: SCS
+                      FPE:SCS
                     </a>
             </div>
             <div class="sidebar-wrapper" id="sidebar-wrapper">

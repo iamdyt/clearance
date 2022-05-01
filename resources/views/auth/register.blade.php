@@ -71,7 +71,7 @@
                             <label for="phoneNumber" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phoneNumber" type="tel" placeholder="0712345678" pattern="[0-9]{4}[0-9]{3}[0-9]{3}" class="form-control @error('phoneNumber') is-invalid @enderror" name="phoneNumber" value="{{ old('phoneNumber') }}" autocomplete="phoneNumber">
+                                <input id="phoneNumber" type="tel" placeholder="09020723456" pattern="[0-9]{11}" class="form-control @error('phoneNumber') is-invalid @enderror" name="phoneNumber" value="{{ old('phoneNumber') }}" autocomplete="phoneNumber">
 
                                 @error('phoneNumber')
                                     <span class="invalid-feedback" role="alert">
@@ -86,10 +86,10 @@
 
                             <div class="col-md-6">
                                 <select id="course" class="form-control @error('course') is-invalid @enderror" name="course">
-                                    <option class="form-control text-wrap" selected>BSc. Information Technology</option>
-                                    <option class="form-control">BSc. Computer Science</option>
-                                    <option class="form-control">BSc. Computer Technology</option>
-                                    <option class="form-control">BSc. Information Computer Technology Management</option>
+                                    <option class="form-control text-wrap" selected>Computer Science</option>
+                                    <option class="form-control" selected>Computer Engineering</option>
+                                    <option class="form-control" selected>Accountancy</option>
+                                    <option class="form-control" selected>Office Technology Management</option>
                                 </select>
 
                                 @error('course')
@@ -106,7 +106,7 @@
                             <div class="col-md-6">
                                 <input id="gender" type="radio" class="@error('gender') is-invalid @enderror" name="gender" value="male" checked required> Male <br>
                                 <input id="gender" type="radio" class="@error('gender') is-invalid @enderror" name="gender" value="female" required> Female <br>
-                                <input id="gender" type="radio" class="@error('gender') is-invalid @enderror" name="gender" value="other" required> Other
+                           
 
                                 @error('gender')
                                     <span class="invalid-feedback" role="alert">

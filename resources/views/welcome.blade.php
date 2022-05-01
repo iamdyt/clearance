@@ -28,14 +28,14 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:pt-0 mt-5">
-                    <img src="{{asset('images/MU-Logo.png')}}" alt="Logo with image of Gradating students over an image of an open book" width="100">
+                    <img src="{{asset('images/logoede.png')}}" alt="Logo with image of Gradating students over an image of an open book" width="100">
                 </div>
                 <div class="flex justify-center text-center pt-8 sm:pt-0">
 
-                    <h1 style="font-size: 44px">Maseno University</h1>
+                    <h1 style="font-size: 44px">Federal Polytechnic Ede</h1>
                 </div>
                 <div class="flex justify-center text-center pt-8 sm:pt-0">
-                    <h2 style="font-size: 28px">Students Clearance System: School Of Computing and Informatics</h2>
+                    <h2 style="font-size: 28px"> Students Clearance System</h2>
                 </div>
                 <div class="flex justify-center m-5">
                     <a href="{{ route('login') }}" class="btn btn-outline-secondary" role="button" aria-pressed="true">Proceed to Clearance</a>

@@ -40,7 +40,7 @@ class UserController extends Controller
 
     public function getClearance(){
         $detail =  Clearance::whereUserId(auth()->id())->first();
-        // return view('user.clearance', compact('detail'));
+        return view('user.clearance', compact('detail'));
         $pdf = PDF::loadView('user.clearance', compact('detail'));
         return $pdf->download('clearance.pdf');
         

@@ -19,7 +19,7 @@
         .certificate-container {
             padding: 50px;
             width: 1024px;
-            /* margin: auto; */
+            margin: auto;
         }
         .certificate {
             border: 2px solid #0C5280;
@@ -123,7 +123,9 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
+            <a class="btn" style="text-align: center; margin-top: 2rem; display:block; color:blue; font-weight:bold; cursor: pointer;" onclick="window.print()">Print</a>
         </div>
     </section>
 

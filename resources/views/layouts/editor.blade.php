@@ -24,7 +24,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-            <img src="{{asset('images/MU-Logo.png')}}" alt="Maseno University Logo" width="50">
+            <img src="{{asset('images/MU-Logo.png')}}" alt="Federal Polytechnic Ede logo" width="50">
                 <a class="navbar-brand ml-2" href="{{ url('/') }}">
                     {{ config('app.name', 'MSUSCI-SCS') }}
                 </a>
