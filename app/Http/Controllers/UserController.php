@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 use App\Models;
+use App\Models\Clearance;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class UserController extends Controller
 {
@@ -22,6 +24,26 @@ class UserController extends Controller
 
     public function clearanceForm(){
         return(view('user.clearance-form'));
+    }
+
+
+    public function clearancePost(){
+        Clearance::create([
+            'user_id' => auth()->id(),
+            'admission_year' => request('startyear'),
+            'completion_year' => request('endyear'),
+            'department' => request('department'),
+            'level' => request('level')
+        ]);
+        return redirect()->back();
+    }
+
+    public function getClearance(){
+        $detail =  Clearance::whereUserId(auth()->id())->first();
+        // return view('user.clearance', compact('detail'));
+        $pdf = PDF::loadView('user.clearance', compact('detail'));
+        return $pdf->download('clearance.pdf');
+        
     }
 
     public function userProfile(){

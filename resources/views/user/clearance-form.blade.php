@@ -6,14 +6,22 @@
 
 @section('content')
     <div class="border">
-        <div class="text-center pt-2 font-weight-light">Kindly fill the clearance form below with correct details</div>
-        <form class="p-2 text-body">
+        <div class="text-center pt-2 font-weight-light"> <span class="text-left">Kindly fill the clearance form below with correct details</span> &emsp; <a href="{{route('get.clearance')}}" class="btn btn-danger">Download Clearance</a> </div>
+        <form class="p-2 text-body" method="POST" action="">
             @csrf
             <fieldset class="p-2 border" style="background-color: #fdfdfd">
                 <div class="form-row">
-                    <div class="form-group col-md-8">
+                    <div class="form-group col-md-6">
                         <label for="studentName">Student Name</label>
-                        <input type="text" class="form-control" id="studentName" required>
+                        <input type="text" readonly class="form-control" value="{{auth()->user()->name}}" id="studentName" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="studentName">Level</label>
+                        <select name="level" class="form-control" id="inputState">
+                            <option value="National Diploma">National Diploma</option>
+                            <option value="Higher National Diploma"> Higher National Diploma</option>
+                        </select>
                     </div>
                     {{-- <div class="form-group col-md-4">
                         <label for="accBalance">Fees Balance</label>
@@ -22,47 +30,38 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="admNumber">Admission Number</label>
-                        <input type="text" class="form-control" id="admNumber" required>
+                        <label for="admNumber">Matriculation Number</label>
+                        <input type="text" readonly class="form-control" value="{{auth()->user()->regNumber}}" id="admNumber" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="startYear">Admission Year</label>
-                        <input type="date" class="form-control" id="startYear" required>
+                        <input type="date" name="startyear" class="form-control" id="startYear" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="endYear">Completion Year</label>
-                        <input type="date" class="form-control" id="endYear" required>
+                        <input type="date"  name='endyear' class="form-control" id="endYear" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <input type="email" readonly class="form-control" value="{{auth()->user()->email}}" id="email" required>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="idNumber">National ID Number</label>
-                        <input type="number" class="form-control" id="idNumber" required>
-                    </div>
+  
                     <div class="form-group col-md-4">
                         <label for="phoneNumber">Phone Number</label>
-                        <input type="tel" placeholder="0712-345-678" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" class="form-control" id="phoneNumber" required>
+                        <input type="tel" readonly placeholder="0712-345-678" value="{{auth()->user()->phoneNumber}}" pattern="[0-9]{11}" class="form-control -[0-9]{3}-[0-9]{3}" id="phoneNumber" required>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-8 text-wrap">
-                        <label for="course">Course</label>
-                        <select id="inputState" class="form-control">
-                        <option class="form-control text-wrap" selected>Bachelor of Science in Information Technology</option>
-                        <option class="form-control" selected>Bachelor of Science in Computer Science</option>
-                        <option class="form-control" selected>Bachelor of Science in Computer Technology</option>
-                        <option class="form-control" selected>Bachelor of Science in Information Computer Technology Management</option>
+
+                    <div class="form-group col-md-4 text-wrap">
+                        <label for="course">Department</label>
+                        <select id="inputState" name="department" class="form-control">
+                        <option class="form-control text-wrap" selected>Computer Science</option>
+                        <option class="form-control" selected>Computer Engineering</option>
+                        <option class="form-control" selected>Accountancy</option>
+                        <option class="form-control" selected>Office Technology Management</option>
                         </select>
                     </div>
-                    {{-- <div class="form-group col-md-2"></div> --}}
-                    {{-- <div class="form-group col-md-4">
-                        <label for="libStatus">Library Status</label>
-                        <input type="text" class="form-control" id="libStatus" required>
-                    </div> --}}
                 </div>
                 <div class="text-center">
                     <button type="reset" class="btn btn-warning">Cancel</button>

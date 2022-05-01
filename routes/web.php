@@ -19,7 +19,11 @@ Route::get('/', function () {
 
 // Default user Routes
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/clearance-form', 'App\Http\Controllers\UserController@clearanceForm');
+Route::post('/clearance-form', 'App\Http\Controllers\UserController@clearancePost');
+Route::get('/getclearance', 'App\Http\Controllers\UserController@getClearance')->name('get.clearance');
+
 Route::get('/user-profile', 'App\Http\Controllers\UserController@userProfile');
 Route::post('/imageUpload', 'App\Http\Controllers\UserController@imageUpload');
 Route::get('/edit', 'App\Http\Controllers\UserController@edit');

@@ -17,7 +17,7 @@
                 </div>
                 <div class="ml-12">
                     <div class="mt-2 text-gray-700 dark:text-gray-400 text-sm">
-                        Maseno University's School of Computing and Informatics. There are various departments within this school based on the cources offered which include; Computer Science, Information Technology, Information Communication Technology Management, and Computer Technology departments.
+                        Federal Polytechnic Ede. There are various departments within this school based on the cources offered which include; Computer Science, Information Technology, Information Communication Technology Management, and Computer Technology departments.
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="ml-12">
                     <div class="mt-2 text-gray-700 dark:text-gray-400 text-sm">
-                        The Dean of Students and Academic office holds various documents partaining the academic status of the student. This can be whether the student is enrolled in Maseno University's School of Computing and Informatics, whether the student is proceeding with their studies in the enrolled courses, and/or whether the student has deferred and re-joined the institution or not.
+                        The Dean of Students and Academic office holds various documents partaining the academic status of the student. This can be whether the student is enrolled in Federal Polytechnic Ede, whether the student is proceeding with their studies in the enrolled courses, and/or whether the student has deferred and re-joined the institution or not.
                     </div>
                 </div>
             </div>
